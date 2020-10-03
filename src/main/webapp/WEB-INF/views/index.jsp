@@ -8,6 +8,6 @@
        <h1>
            Main Page says! Hello World
         </h1>
-        <a href="showForm">Go to Form!></a>
+        <a href="second/showForm">Go to Form!></a>
     </body>
 </html>
