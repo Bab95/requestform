@@ -5,6 +5,6 @@
     <title>Conformation Page</title>
     <head>Confirmation page</head>
     <body>
-        The Student Name is: ${student.firstName} ${student.lastName}
+        The Student Name is: ${student.firstName} ${student.lastName} from ${student.country}
     </body>
 </html>

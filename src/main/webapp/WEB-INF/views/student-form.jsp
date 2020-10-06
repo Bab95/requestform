@@ -191,6 +191,15 @@
                     <form:input path="lastName" />
                     <label>LastName</label>
                 </div>
+                <br><br>
+                Country:<form:select path="country">
+                  <form:option value="Brazil" labele="Brazil"></form:option>
+                  <form:option value="France" labele="France"></form:option>
+                  <form:option value="Germany" labele="Germany"></form:option>
+                  <form:option value="Poland" labele="Poland"></form:option>
+                  <form:option value="Russia" labele="Russia"></form:option>
+                  <form:option value="India" labele="India"></form:option>
+                </form:select>
                 <div class="submit-box">
                     <input type="submit" value="Submit" class="sub-submit">
                     <span></span>
