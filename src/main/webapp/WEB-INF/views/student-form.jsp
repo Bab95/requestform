@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <title>Student Form</title>
-    <head>Student Registration Form
+    <head><div class="header-box"><h2>Student Registration Form</h2></div>
         <style type="text/css">
             html {
                 height: 100%;
@@ -17,7 +17,18 @@
             input [type=submit]{
               background-color: rgba(0,0,0,.5);
             }
-
+            .header-box{
+              position: absolute;
+                top: 10%;
+                left: 50%;
+                width: 400px;
+                padding: 40px;
+                transform: translate(-50%, -50%);
+                background: rgba(0,0,0,.5);
+                box-sizing: border-box;
+                box-shadow: 0 15px 25px rgba(0,0,0,.6);
+                border-radius: 10px;
+            }
             .login-box {
                 position: absolute;
                 top: 50%;
@@ -37,7 +48,12 @@
               color: #fff;
               text-align: center;
             }
-
+            .header-box h2 {
+              margin: 0 0 30px;
+              padding: 0;
+              color: #fff;
+              text-align: center;
+            }
             .login-box .user-box {
               position: relative;
             }
@@ -193,12 +209,7 @@
                 </div>
                 <br><br>
                 Country:<form:select path="country">
-                  <form:option value="Brazil" labele="Brazil"></form:option>
-                  <form:option value="France" labele="France"></form:option>
-                  <form:option value="Germany" labele="Germany"></form:option>
-                  <form:option value="Poland" labele="Poland"></form:option>
-                  <form:option value="Russia" labele="Russia"></form:option>
-                  <form:option value="India" labele="India"></form:option>
+                  <form:options items="${student.countryOptions}" />
                 </form:select>
                 <div class="submit-box">
                     <input type="submit" value="Submit" class="sub-submit">
