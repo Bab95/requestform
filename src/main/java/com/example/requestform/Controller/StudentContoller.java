@@ -1,9 +1,12 @@
 package com.example.requestform.Controller;
 
+import javax.validation.Valid;
+
 import com.example.requestform.Model.Student;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -21,8 +24,13 @@ public class StudentContoller {
     }
 
     @RequestMapping("/processForm")
-    public String processForm(@ModelAttribute("student")Student thestudent){
+    public String processForm(@Valid @ModelAttribute("student")Student thestudent,BindingResult theBindingResult){
         //log the input data....
+        if(theBindingResult.hasErrors()){
+            System.out.println("Error has occurred!!!");
+            //SAME PAGE WILL BE RETURNED HERE......
+            return "student-form";
+        }
         System.out.println(thestudent.getFirstName()+"------my custom logs----"+thestudent.getLastName());
         return "student-conformation";
     }

@@ -191,6 +191,9 @@
                 bottom: 100%;
               }
             }
+            .error{
+              color: red;
+            }
         </style>
     </head>
     <body>
@@ -205,7 +208,8 @@
               
                 <div class="user-box">
                     <form:input path="lastName" />
-                    <label>LastName</label>
+                    <form:errors path="lastName" cssClass="error"/>
+                    <label>LastName(*)</label>
                 </div>
                 <br><br>
                 Country:<form:select path="country">
