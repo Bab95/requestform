@@ -8,7 +8,7 @@ public class Student {
 
     private String firstName;
     
-    @NotNull
+    @NotNull(message="can't be NULL")
     @Size(min=1,message="is required")
     private String lastName;
     
